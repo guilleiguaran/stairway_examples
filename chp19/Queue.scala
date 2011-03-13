@@ -49,10 +49,7 @@ class Queue[T] (private val leading: List[T], private val trailing: List[T]) {
 
   override def toString: String = {
     val queue = leading ::: trailing.reverse
-    val listString =
-      if(queue.isEmpty) ""
-      else queue.mkString(", ")
-      "Queue(" + listString + ")"
+    val listString = "Queue(" + queue.mkString(", ") + ")"
   }
 }
 
